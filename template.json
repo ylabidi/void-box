@@ -13,7 +13,7 @@
 			"iso_url": "https://alpha.de.repo.voidlinux.org/live/current/void-live-x86_64-20191109.iso",
 			"iso_checksum": "c471733859ff0a315e3848fe39c153e22700b1baa039453358643bbae93b7058",
 			"iso_checksum_type": "sha256",
-			"ssh_wait_timeout": "1m",
+			"ssh_wait_timeout": "4m",
 			"ssh_username": "root",
 			"ssh_password": "voidlinux",
 			"shutdown_command": "poweroff",
