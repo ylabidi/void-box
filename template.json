@@ -44,17 +44,6 @@
 						"output": "voidlinux.box"
 					}
 				}
-			},
-			{
-				"type": "atlas",
-				"only": ["virtualbox-iso"],
-				"artifact": "apelabs/voidlinux",
-				"artifact_type": "vagrant.box",
-				"metadata": {
-					"description": "Base Void Linux box used in lab virtual machines",
-					"provider": "virtualbox",
-					"version": "1.0.1"
-				}
 			}
 		]
 	]
