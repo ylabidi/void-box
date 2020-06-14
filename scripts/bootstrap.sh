@@ -13,7 +13,8 @@ echo "> Install base-system and grub"
 mount /dev/sda2 /mnt
 mkdir /mnt/boot
 mount /dev/sda1 /mnt/boot
-yes | xbps-install -Sy -R http://repo.voidlinux.eu/current -r /mnt base-system grub
+yes | xbps-install -Sy -r /mnt -R https://alpha.de.repo.voidlinux.org/current \
+  base-system base-devel grub curl vim python python3 dbus virtualbox-ose-guest
 
 echo "> Prepare chroot"
 mount -t proc proc /mnt/proc
