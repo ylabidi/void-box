@@ -1,9 +1,8 @@
-Void Packer
------------
+Void Box
+========
 
-Provisions a basebox to be used by Vagrant.
+Packer template to build a void linux box. Based off this [implementation](https://github.com:bli-ng/void-packer).
 
-Usage
-=====
+## Usage
 
-	packer build template.json
+`packer build template.json`
