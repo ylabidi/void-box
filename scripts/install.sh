@@ -25,12 +25,12 @@ echo ">> Enable critical services"
 ln -s /etc/sv/dhcpcd /etc/runit/runsvdir/default/dhcpcd
 ln -s /etc/sv/sshd   /etc/runit/runsvdir/default/sshd
 
-echo ">> Install Virtualbox Guest Additions"
-xbps-install -Sy -R http://repo.voidlinux.eu/current virtualbox-ose-guest
-ln -s /etc/sv/vboxservce /etc/runit/runsvdir/default/vboxservice
+echo ">> Install VirtualBox guest kernel modules"
+yes | xbps-install -Sy virtualbox-ose-guest-dkms
 
-echo ">> Install Python"
-xbps-install -Sy -R http://repo.voidlinux.eu/current python
+echo ">> Enable VirtualBox guest service"
+ln -s /etc/sv/dbus        /etc/runit/runsvdir/default/dbus
+ln -s /etc/sv/vboxservice /etc/runit/runsvdir/default/vboxservice
 
 echo ">> Set hostname: voidlinux"
 echo "voidlinux" > /etc/hostname
