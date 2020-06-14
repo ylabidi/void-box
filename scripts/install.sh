@@ -55,7 +55,7 @@ echo ">> Install grub"
 grub-install /dev/sda
 
 echo ">> Determine kernel version"
-linux_kernel=`xbps-query --regex -Rs '^linux[[:digit:]]\.[-0-9\._]*$' | cut -f2 -d' ' | sort -V | tail -n1`
-
+kernel_version="$(xbps-query -l | cut -f2 -d' ' | \
+    grep -E 'linux[0-9]\.[0-9].*' | sed 's/\(.*\)\-.*/\1/')"
 echo ">> Configure Linux kernel"
-xbps-reconfigure -f ${linux_kernel}
+xbps-reconfigure -f ${kernel_version}
