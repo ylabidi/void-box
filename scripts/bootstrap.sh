@@ -1,7 +1,7 @@
 echo "> Partition Disk"
 sfdisk /dev/sda << EOF
 label: dos
-, 200M, L, *
+, 512M, L, *
 , , L,
 EOF
 
