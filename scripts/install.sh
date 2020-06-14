@@ -9,8 +9,8 @@ echo "vagrant:vagrant" | chpasswd -c SHA512
 echo ">> Configure vagrant ssh usage"
 mkdir -p /home/vagrant/.ssh
 chmod 0700 /home/vagrant/.ssh
-yes | xbps-install -Sy -R http://repo.voidlinux.eu/current curl
-curl -L https://raw.githubusercontent.com/mitchellh/vagrant/master/keys/vagrant.pub -o /home/vagrant/.ssh/authorized_keys
+curl --silent -L https://raw.githubusercontent.com/hashicorp/vagrant/master/keys/vagrant.pub \
+    -o /home/vagrant/.ssh/authorized_keys
 chmod 0600 /home/vagrant/.ssh/authorized_keys
 chown -R vagrant:vagrant /home/vagrant/.ssh
 
