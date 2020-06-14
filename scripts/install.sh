@@ -23,7 +23,7 @@ echo "root:voidlinux" | chpasswd -c SHA512
 
 echo ">> Enable critical services"
 ln -s /etc/sv/dhcpcd /etc/runit/runsvdir/default/dhcpcd
-ln -s /etc/sv/sshd /etc/runit/runsvdir/default/sshd
+ln -s /etc/sv/sshd   /etc/runit/runsvdir/default/sshd
 
 echo ">> Install Virtualbox Guest Additions"
 xbps-install -Sy -R http://repo.voidlinux.eu/current virtualbox-ose-guest
